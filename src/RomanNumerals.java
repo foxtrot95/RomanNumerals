@@ -11,6 +11,7 @@ public class RomanNumerals {
 			
 			char currentRomanDigit = romanNum.charAt(i);
 			
+			//check repetitions
 			if(currentRomanDigit == lastRomanDigit) {
 				if(currentRomanDigit == 'V' || currentRomanDigit == 'L' || currentRomanDigit == 'D')
 					return 0;
@@ -18,19 +19,22 @@ public class RomanNumerals {
 				repetitions++; 
 				if(repetitions >= 3)
 					return 0; 
-			}
-			else{
+			}else{
 				lastRepetations = repetitions; 
 				repetitions = 0; 
 			}
 			
+			//check if in valid order
 			if(checkInValidOrder(lastRomanDigit, currentRomanDigit))
 				return 0; 
 			
+			//add to result
 			result += convertRomanDigit(romanNum.charAt(i));
 			
+			//substract again if necessary 
 			if(checkIfSubtract(lastRomanDigit, currentRomanDigit)) {
 				
+				//invalid number if repetition of number before is greater than 0 
 				if(lastRepetations > 0)
 					return 0; 
 				
@@ -40,9 +44,7 @@ public class RomanNumerals {
 			lastRomanDigit = currentRomanDigit; 
 		}
 		
-		// To be Implemented
 		return result;
-		
 	}
 	
 	public boolean checkInValidOrder(char lastRomanDigit, char currentRomanDigit) {
