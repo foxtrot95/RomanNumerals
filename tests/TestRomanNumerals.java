@@ -781,5 +781,20 @@ public class TestRomanNumerals {
 		//Assert
 		assertEquals(expectedResult, result);
 	}
+	
+	@Test
+	public void convertToInteger_XIVMM() {
+		//Arrange
+		String romanNum= "XIVMM";
+		RomanNumerals romanNumeral = new RomanNumerals();
+		int result; 
+		int expectedResult = 0;
+		
+		//Act
+		result = romanNumeral.convertToInteger(romanNum); 
+		
+		//Assert
+		assertEquals(expectedResult, result);
+	}
 
 }
