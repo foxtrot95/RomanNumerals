@@ -49,32 +49,38 @@ public class RomanNumerals {
 	
 	public boolean checkInValidOrder(char lastRomanDigit, char currentRomanDigit) {
 		
-		if(lastRomanDigit == 'V' && currentRomanDigit == 'X') {
+		if(lastRomanDigit == 'V' && currentRomanDigit == 'X') 
 			return true;
-		}else if(lastRomanDigit == 'L' && currentRomanDigit == 'D') {
+		if(lastRomanDigit == 'V' && currentRomanDigit == 'L') 
 			return true;
-		}else if(lastRomanDigit == 'D' && currentRomanDigit == 'M') {
+		if(lastRomanDigit == 'V' && currentRomanDigit == 'D') 
 			return true;
-		}
+		if(lastRomanDigit == 'L' && currentRomanDigit == 'D') 
+			return true;
+		if(lastRomanDigit == 'V' && currentRomanDigit == 'M') 
+			return true;
+		if(lastRomanDigit == 'L' && currentRomanDigit == 'M') 
+			return true;
+		if(lastRomanDigit == 'D' && currentRomanDigit == 'M') 
+			return true;
 		
 		return false; 
 	}
 	
 	public boolean checkIfSubtract(char lastRomanDigit, char currentRomanDigit) {
 		
-		if(lastRomanDigit == 'I' && currentRomanDigit == 'V') {
+		if(lastRomanDigit == 'I' && currentRomanDigit == 'V')
 			return true; 
-		}else if(lastRomanDigit == 'I' && currentRomanDigit == 'X') {
+		if(lastRomanDigit == 'I' && currentRomanDigit == 'X') 
 			return true;
-		}else if(lastRomanDigit == 'X' && currentRomanDigit == 'C') {
+		if(lastRomanDigit == 'X' && currentRomanDigit == 'C') 
 			return true;
-		}else if(lastRomanDigit == 'X' && currentRomanDigit == 'L') {
+		if(lastRomanDigit == 'X' && currentRomanDigit == 'L') 
 			return true;
-		}else if(lastRomanDigit == 'C' && currentRomanDigit == 'D') {
+		if(lastRomanDigit == 'C' && currentRomanDigit == 'D') 
 			return true;
-		}else if(lastRomanDigit == 'C' && currentRomanDigit == 'M') {
+		if(lastRomanDigit == 'C' && currentRomanDigit == 'M') 
 			return true;
-		}
 		
 		return false; 
 	}
@@ -99,6 +105,5 @@ public class RomanNumerals {
 			default: 
 				return 0; 
 		}
-		
 	}
 }
